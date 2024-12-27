@@ -1,0 +1,96 @@
+<!-- 
+<div class="flex">
+    <nav id="sidebarMenu" class="sidebar col-md-3 col-lg-2 d-md-block bg-dark collapse">
+        <div class="position-sticky">
+            <ul class="nav flex-column">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home/counter-order">
+                        Counter Order
+                    </a>
+                </li>
+                
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-4 fade-in col-md-9 offset-md-3 col-lg-10 offset-lg-2">
+        <div class="row mt-4 margin-left">
+            <div class="col-md-6">
+                <div class="custom-box shadow-lg p-3 mb-5 rounded text-dark bg-danger">
+                    <p class="fw-bold fs-5">Grand Total Payments (Cash)</p>
+                    <h1>100</h1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-box shadow-lg p-3 mb-5 rounded text-dark bg-danger">
+                    <p class="fw-bold fs-5">Grand Total Payments (UPI)</p>
+                    <h1>100</h1>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-4 margin-left">
+            <div class="col-md-6">
+                <div class="custom-box shadow-lg p-3 mb-5 rounded text-dark bg-danger">
+                    <p class="fw-bold fs-5">Cash Orders</p>
+                    <h1>100</h1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-box shadow-lg p-3 mb-5 rounded text-dark bg-danger">
+                    <p class="fw-bold fs-5">UPI Orders</p>
+                    <h1>100</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="flex">
+    <nav id="sidebarMenu" class="sidebar col-md-3 col-lg-2 d-md-block bg-dark collapse">
+        <div class="position-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home/counter-order">
+                        Counter Order
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-4 fade-in col-md-9 offset-md-3 col-lg-10 offset-lg-2">
+        <div class="row mt-4 margin-left">
+            <div class="col-md-6">
+                <div class="custom-box shadow-lg p-3 mb-5 rounded text-dark bg-danger">
+                    <p class="fw-bold fs-5">Grand Total Payments (Cash)</p>
+                    <h1>{{ grandTotalCash$ | async }}</h1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-box shadow-lg p-3 mb-5 rounded text-dark bg-danger">
+                    <p class="fw-bold fs-5">Grand Total Payments (UPI)</p>
+                    <h1>{{ grandTotalUpi$ | async }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 margin-left">
+            <div class="col-md-6">
+                <div class="custom-box shadow-lg p-3 mb-5 rounded text-dark bg-danger">
+                    <p class="fw-bold fs-5">Cash Orders</p>
+                    <h1>{{ totalCashOrders$ | async }}</h1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-box shadow-lg p-3 mb-5 rounded text-dark bg-danger">
+                    <p class="fw-bold fs-5">UPI Orders</p>
+                    <h1>{{ totalUpiOrders$ | async }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

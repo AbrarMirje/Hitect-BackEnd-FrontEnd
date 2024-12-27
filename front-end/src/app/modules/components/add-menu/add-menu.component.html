@@ -1,0 +1,86 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-container">
+        <h4>{{ editingItemId ? 'Update' : 'Add' }} Menu</h4>
+        <form [formGroup]="addItemForm" (ngSubmit)="onAddItem()">
+          <div class="mb-3">
+            <input type="text" formControlName="itemName" class="form-control" placeholder="Item Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" formControlName="itemPrice" class="form-control" placeholder="Item Price">
+          </div>
+          <div class="mb-3">
+            <input type="file" (change)="onFileSelected($event)" class="form-control">
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-success m-1">{{ editingItemId ? 'Update' : 'Add' }}</button>
+            <button type="reset" class="btn btn-danger m-1" (click)="resetItemForm()">Clear</button>
+          </div>
+        </form>
+
+        <!-- Topping Form -->
+        <h4>{{ editingToppingId ? 'Update' : 'Add' }} Topping</h4>
+        <form [formGroup]="addToppingForm" (ngSubmit)="onAddTopping()">
+          <div class="mb-3">
+            <input type="text" hidden formControlName="toppingId" class="form-control" placeholder="Topping Id">
+          </div>
+          <div class="mb-3">
+            <input type="text" formControlName="toppingName" class="form-control" placeholder="Topping Name">
+          </div>
+          <div class="mb-3">
+            <input type="text" formControlName="toppingPrice" class="form-control" placeholder="Topping Price">
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-success m-1">{{ editingToppingId ? 'Update' : 'Add' }}</button>
+            <button type="reset" class="btn btn-danger m-1" (click)="resetToppingForm()">Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-color m-1" (click)="toggleView('menu')">Menu</button>
+        <button class="btn btn-color m-1" (click)="toggleView('topping')">Toppings</button>
+      </div>
+
+
+
+      <div *ngIf="showMenu" style="overflow-y: auto; overflow-x: hidden; max-height: 400px;">
+        <h2 class="fw-bold">Items</h2>
+        <div class="card p-3">
+          <div *ngFor="let item of items" class="card p-3 mb-2">
+            <div class="d-flex justify-content-between">
+              <span>{{ item.itemName }}</span>
+              <span>₹{{ item.itemPrice }}</span>
+            </div>
+            <div class="d-flex justify-content-end mt-2">
+              <button class="btn btn-success me-2" (click)="onUpdateItem(item)">Update</button>
+              <button class="btn btn-danger" (click)="onDeleteItem(item)">X</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Toppings List -->
+      <div *ngIf="!showMenu" style="overflow-y: auto; overflow-x: hidden; max-height: 400px;">
+        <h4>Toppings</h4>
+        <div class="card p-3">
+          <div *ngFor="let topping of toppings" class="card p-3 mb-2">
+            <div class="d-flex justify-content-between">
+              <!-- <span>{{ topping.toppingId }}</span> -->
+              <span>{{ topping.toppingName }}</span>
+              <span>₹{{ topping.toppingPrice }}</span>
+            </div>
+            <div class="d-flex justify-content-end mt-2">
+              <button class="btn btn-success me-2" (click)="onUpdateTopping(topping)">Update</button>
+              <button class="btn btn-danger" (click)="onDeleteTopping(topping)">x</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

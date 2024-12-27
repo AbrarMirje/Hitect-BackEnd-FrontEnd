@@ -1,0 +1,99 @@
+.invoice {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.invoice h1,
+.invoice h2 {
+  text-align: center;
+  margin: 0;
+}
+.invoice h1 {
+  font-size: 24px;
+}
+.invoice h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.invoice .line {
+  border-top: 1px dashed #000;
+  margin: 15px 0;
+}
+.invoice .details {
+  text-align: center;
+}
+.invoice .details p {
+  margin: 0;
+  font-size: 14px;
+}
+.invoice table th,
+.invoice table td {
+  padding: 8px 0;
+  text-align: left;
+}
+.invoice table th {
+  font-weight: bold;
+}
+.invoice .total-cost {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+.no-print {
+  color: red;
+  font-weight: bold;
+}
+
+/* Print-specific styles */
+@media print {
+  .no-print {
+      display: none; /* Hide buttons and other non-printable elements */
+  }
+
+  .invoice {
+      border: none; /* Remove border in print */
+      margin: 0;
+      padding: 0;
+  }
+
+  .kitchen-copy {
+      page-break-after: always; /* Ensure the kitchen copy prints on a separate page */
+  }
+
+  .customer-copy {
+      page-break-after: auto; /* No page break after customer copy */
+  }
+}
+
+
+@media print {
+  @page {
+    margin-top: 0; /* Minimize page margins for better control */
+    margin-bottom: 0; /* Minimize page margins for better control */
+  }
+}
+
+table {
+  width: 100%; /* Make the table responsive */
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd; /* Optional: Add borders for better visibility */
+  align-items: center;
+}
+
+th {
+  white-space: nowrap; /* Prevent text wrapping */
+  /* background-color: #f2f2f2;  */
+  font-weight: bold; /* Ensure headers are bold */
+}
+
+td {
+  word-break: break-word; /* Allow text wrapping in data cells */
+}

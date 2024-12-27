@@ -1,0 +1,39 @@
+<!-- Header -->
+<header>
+    <h1>Mahalakshmi Sandwich</h1>
+</header>
+
+<!-- Main Content -->
+<main class="container">
+    <!-- Completed Orders -->
+    <div class="col-md-12">
+        <div class="order-section ">
+            <h1 class="order-header fw-bold">Order Summary</h1>
+            <!-- Show only the latest order -->
+            <ul class="list-group">
+                <ng-container *ngFor="let o of orders">
+                    <li class="list-group-item d-flex justify-content-between align-items-center text-white"
+                        style="font-size: 1.5rem; background-color: #5ea26a; font-weight: bold;">
+                        Order no: {{o.billNumber}} <!-- This should reflect the actual bill number -->
+                        <span class="badge text-white" style="font-size: 1.5rem; font-weight: bold;">Ready</span>
+                    </li>
+                </ng-container>
+
+                <!-- Pending Orders -->
+                <ng-container *ngFor="let p of pending_orders">
+                    <li class="list-group-item d-flex justify-content-between align-items-center"
+                        style="font-size: 1.5rem; font-weight: bold;">
+                        Order no: {{p.billNumber}}
+                        <span>In Process</span>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<!-- Footer (Fixed at Bottom) -->
+<footer class="text-center mt-4">
+    <marquee behavior="scroll" class="fs-3" direction="left" style="font-size: 2.0rem; font-weight: bold;">Thanks, Visit
+        Again!</marquee>
+</footer>

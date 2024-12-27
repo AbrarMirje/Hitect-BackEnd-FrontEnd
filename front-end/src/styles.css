@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+    html, body {
+        /* background-image: url("assets/img/global-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; */
+        height: auto;
+        min-height: 100%;
+        position: relative;
+    }
+    body::before {
+        content: "";
+        position: fixed; /* Fix the background to cover the entire screen */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Ensures the image covers the entire viewport height */
+        background-image: url("assets/img/global-bg.jpg");
+        background-size: cover; /* Ensures the image covers the entire screen */
+        background-repeat: no-repeat;
+        background-position: center center; /* Center the image */
+        z-index: -1; /* Keep it behind other content */
+        opacity: 0.5; /* Adjust opacity as desired */
+    }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-x: hidden;}
+
+        /* Default styles */
+        .no-print {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            .no-print {
+                display: none; /* Hide this element when printing */
+            }
+        }

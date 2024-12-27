@@ -1,0 +1,58 @@
+
+body {
+    background-color: #f7f5f5;
+}
+
+.navbar, .btn-primary, .btn-danger {
+    transition: all 0.3s ease;
+}
+
+.navbar:hover, .btn-primary:hover, .btn-danger:hover {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+    .nav-pills .nav-link {
+    background-color: #6c757d; /* Bootstrap secondary color (grey) */
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 10px;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+    color: white;
+   
+}
+
+.nav-pills .nav-link.active {
+    background-color: #545b62; /* Slightly darker grey for active state */
+    color: white;
+   
+}
+

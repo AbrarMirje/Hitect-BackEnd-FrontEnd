@@ -1,0 +1,91 @@
+
+body {
+    background-color: #f7f5f5;
+}
+
+.bill-item.active {
+    background-color: #f4f4f4 !important;
+    color: white;
+}
+
+.bill-item.red {
+    background-color: #f8d7da !important;
+}
+
+.bill-item .badge {
+    font-size: 1rem;
+    background-color: #cecece;
+}
+
+.bill-item .actions .btn {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for the action buttons */
+.actions .btn-outline-secondary {
+    color: #6c757d;
+    /* Gray color */
+    border-color: #6c757d;
+    /* Gray border */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Light shadow */
+}
+
+/* Hover effect with animation */
+.actions .btn-outline-secondary:hover {
+    background-color: white;
+    /* White background on hover */
+    color: #6c757d;
+    /* Gray text color on hover */
+    border-color: #6c757d;
+    /* Gray border color on hover */
+    transform: scale(1.05);
+    /* Slightly scale up */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+}
+
+@media (max-width: 768px) {
+    .bill-item .badge {
+        font-size: 0.9rem;
+    }
+
+    .bill-item .actions .btn {
+        font-size: 1rem;
+    }
+
+    .table-container {
+        margin-bottom: 20px;
+    }
+}
+
+.margin{
+    margin-left: 20px;
+}
+
+.table-container {
+    min-height: 270px; /* Adjust the height as needed */
+    max-height: 270px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: auto; /* Enables horizontal scrolling, if necessary */
+  }
+  
+  .table-container table {
+    width: 100%; /* Ensures the table takes full width of the container */
+    border-collapse: collapse; /* Ensures borders between table cells are merged */
+  }
+  
+  .table-container th, .table-container td {
+    white-space: nowrap; /* Prevents text from wrapping, making horizontal scrolling possible */
+    text-align: center; /* Optional: Center-aligns text in table cells */
+  }
+  

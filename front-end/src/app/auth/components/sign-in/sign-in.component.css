@@ -1,0 +1,72 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f9;
+}
+
+.register-page {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.register-box {
+    width: 100%;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.register-logo a {
+    font-size: 2rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-card-body {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.input-group .form-control {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.input-group-append .input-group-text {
+    background-color: #f4f6f9;
+    border: 1px solid #ced4da;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .register-page {
+        max-width: 90%;
+    }
+}

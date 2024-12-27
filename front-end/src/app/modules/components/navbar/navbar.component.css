@@ -1,0 +1,90 @@
+body {
+    background-color: #f7f5f5;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Transition effects for buttons and navigation */
+.navbar, .btn-primary, .btn-danger {
+    transition: all 0.3s ease;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Button styles */
+.btn {
+    font-weight: bold;
+    color: white;
+}
+
+.btn:hover {
+    font-weight: bold;
+    color: white;
+}
+
+/* Background color for navigation buttons */
+.bg-color {
+    /* background-color: darkblue; */
+    border: none;
+}
+
+/* Navigation pills styling */
+.nav-pills .nav-link {
+    background-color: #6c757d; /* Bootstrap secondary color (grey) */
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 10px;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+    color: white;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #545b62; /* Slightly darker grey for active state */
+    color: white;
+}
+
+
+.main-bg-color{
+    /* background: linear-gradient(90deg, #9c4b00, #e67600); */
+    /* background: linear-gradient(90deg, #f0c27b, #4b1248);  => 1   */
+    /* background: linear-gradient(90deg, #ff7e5f, #feb47b); */
+    /* background: linear-gradient(90deg, #ff512f, #f09819); */
+    background: linear-gradient(90deg, #d53369, #cbad6d);
+    /* background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4); => 3 */
+}

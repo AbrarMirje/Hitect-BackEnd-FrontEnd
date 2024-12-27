@@ -1,0 +1,98 @@
+<div class="invoice mt-5" *ngIf="orderData">
+    <!-- Kitchen Copy -->
+    <div class="kitchen-copy">
+        <h1>Mahalakshmi Sandwich</h1>
+        <div class="line"></div>
+        <div class="details">
+            <p>Invoice Number: {{ invoiceNumber }}</p>
+        </div>
+        <div class="line"></div>
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Qty</th>
+                    <th>Toppings</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of orderData.saleItemsHelpers">
+
+                    <td>{{ item.item.itemName }}</td>
+                    <td>{{ item.saleQty }}</td>
+                    <td>
+                        <ul *ngFor="let topping of item.toppings">
+                            <li>{{ topping.toppingName }}</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <!-- Customer Copy -->
+    <div class="customer-copy mt-5">
+        <h1>Mahalakshmi Sandwich</h1>
+        <h2>Invoice</h2>
+        <div class="line"></div>
+        <div class="details">
+            <p>1116 D, Bhagirathi Heights, E Ward, Shahupuri</p>
+            <p>Kolhapur - 416001</p>
+            <p>9867289789</p>
+        </div>
+        <div class="line"></div>
+        <div class="details">
+            <p>Invoice Number: {{ invoiceNumber }}</p>
+            <p>Date: {{ date }}</p>
+            <p>Time: {{ time }}</p>
+        </div>
+        <div class="line"></div>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Qty</th>
+                    <th>Item </th>
+                    <th>Toppings</th>
+                    <th>Topping Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of orderData.saleItemsHelpers">
+                    <td>{{ item.item.itemName }}</td>
+                    <td>{{ item.saleQty }}</td>
+                    <td>₹{{ item.item.itemPrice }}</td>
+                    <td>
+                        <ul class="list-unstyled mb-0">
+                            <li *ngFor="let topping of item.toppings">{{ topping.toppingName }}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="list-unstyled mb-0">
+                            <li *ngFor="let topping of item.toppings">₹{{ topping.toppingPrice }}</li>
+                        </ul>
+                    </td>
+                    <td>₹{{ getItemTotal(item) }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="line"></div>
+        <div class="details">
+            <p>Total: ₹{{ getTotal() }}</p>
+        </div>
+        <div class="line"></div>
+        <div class="total-cost">Total Bill Cost: ₹{{ orderData.finalTotal }}</div>
+    </div>
+</div>
+
+<!-- Buttons -->
+<div class="text-center m-2 no-print">
+    <button class="btn btn-info" type="button" (click)="printBill()">Print Bill</button>
+</div>
+<div class="text-center m-2 no-print">
+    <button class="btn btn-danger" type="button" routerLink="/home">Back</button>
+</div>

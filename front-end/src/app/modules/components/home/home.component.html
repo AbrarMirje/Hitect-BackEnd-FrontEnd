@@ -1,0 +1,9 @@
+<div *ngIf="isLoading" class="spinner-overlay">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<app-navbar class="no-print"></app-navbar>
+<router-outlet class="no-print"></router-outlet>
+
+<app-footer class="no-print"></app-footer>

@@ -1,0 +1,8 @@
+FROM openjdk:17
+WORKDIR /app
+
+COPY target/POS_CAFE-0.0.1-SNAPSHOT.jar /app/POS_CAFE-0.0.1-SNAPSHOT.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "POS_CAFE-0.0.1-SNAPSHOT.jar"]

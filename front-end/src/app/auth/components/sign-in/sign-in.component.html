@@ -1,0 +1,39 @@
+<div class="register-page m-auto mt-5">
+    <div class="register-box">
+        <div class="register-logo text-center">
+            <h2><b>Login</b> Form</h2>
+        </div>
+
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Welcome to Mahalaxmi Sandwich</p>
+
+                <form [formGroup]="form" (ngSubmit)="login()">
+                    <div class="input-group mb-3">
+                        <input formControlName="username" type="email" class="form-control" placeholder="Email">
+                        <div class="input-group-append">
+                            <!-- <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input formControlName="password" type="password" class="form-control" placeholder="Password">
+                        <div class="input-group-append">
+                            <!-- <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-2 ">
+                            <button type="submit" class="btn btn-primary btn-block col-12">Sign In</button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>

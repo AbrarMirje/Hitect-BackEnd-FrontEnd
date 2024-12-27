@@ -1,0 +1,129 @@
+
+body {
+    background-color: #f7f5f5;
+}
+
+.btn-primary, .btn-danger {
+    transition: all 0.3s ease;
+}
+
+/* .btn-primary:hover, .btn-danger:hover {
+    background-color: #8a92a2;
+    color: #000000;
+} */
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+footer {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav-pills .nav-link {
+    background-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 10px;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #545b62;
+    color: white;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-container:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #dcdcdc;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+    z-index: 0;
+}
+
+.form-container:hover:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.form-container h4 {
+    z-index: 1;
+    position: relative;
+    font-weight: bold;
+}
+
+.form-container form {
+    z-index: 1;
+    position: relative;
+}
+
+.form-control {
+    border-radius: 25px;
+}
+
+.btn {
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-color{
+    background: linear-gradient(90deg, #d53369, #cbad6d);
+    color: white;
+    font-weight: 700;
+}

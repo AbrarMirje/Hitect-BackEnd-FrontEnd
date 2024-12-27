@@ -1,0 +1,56 @@
+    /* Custom styling */
+    header {
+        background-color: #3b5998;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+
+    }
+
+    main {
+        padding: 10px 0;
+        flex: 1;
+        /* Makes sure the main section grows */
+    }
+
+    .order-section {
+        min-height: 100px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .order-header {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #343a40;
+    }
+
+    /* Fixed footer styling */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        background-color: #fff; /* Optional: set background */
+        overflow: hidden; /* Prevent scroll */
+      }
